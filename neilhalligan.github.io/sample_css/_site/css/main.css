@@ -128,7 +128,7 @@ h2 ~ p {
   float: right;
   padding: 5.5vh 60px 0 0;
 }
-.header-nav > li {
+.header-nav li {
   display: inline-block;
   margin-left: 1em;
 }
@@ -138,13 +138,15 @@ h2 ~ p {
 }
 .header-nav a {
   color: #fff;
+}
+.nav-links a {
   font-size: 0.8rem;
   font-weight: bold;
   text-decoration: none;
   text-transform: uppercase;
 }
-.header-nav a:hover,
-.header-nav a:active {
+.nav-links a:hover,
+.nav-links a:active {
   color: #ed6e2f;
 }
 .header-nav > li:first-child a {
@@ -170,4 +172,11 @@ h2 ~ p {
 }
 .footer h3 span {
   color: #aaa;
+}
+.footer-nav a {
+  color: #ccc;
+}
+.footer-nav li {
+  display: inline-block;
+  margin: 2em 1em 0;
 }
