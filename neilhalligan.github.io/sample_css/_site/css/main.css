@@ -5,14 +5,24 @@ html {
   padding: 0 30px;
 }
 body {
+  display: flex;
+  flex-direction: column;
   font-family: helvetica, arial, sans;
+  min-height: 100vh;
 }
 h1 {
   font-size: 7vw;
   margin-top: 0;
 }
 a {
-  color: #f00;
+  color: #6397b5;
+}
+p {
+  line-height: 1.5;
+  margin: 0.75em 0;
+}
+h2 {
+  font-size: 2em;
 }
 h2 ~ p {
   font-size: 0.8em;
@@ -22,17 +32,14 @@ h2 ~ p {
   text-align: center;
 }
 
-/* HERO STYLES */
-.full-hero {
-  background-color: #c7dbfc;
-  height: 50vh;
-}
-
 /* SOCIAL STYLES */
 .social-list {
   list-style: none;
   padding: 0;
   text-align: center;
+}
+.social-list-footer {
+  margin-bottom: 8vh;
 }
 .social-link {
   background: rgba(150, 150, 150, 0.5);
@@ -72,16 +79,15 @@ h2 ~ p {
   overflow: hidden;
 }
 .bio-box {
-  border: 1px solid black;
-  border-color: black black red;
   box-sizing: border-box;
   float: left;
   font-size: 1rem;
-  margin: 40px 1% 0;
-  padding: 0 2% 2%;
-  width: 23%;
+  margin: 6rem 0 0;
+  padding: 0 3%;
+  width: 33%;
 }
 .bio-box h3 {
+  text-transform: uppercase;
   color: #fff;
   font-size: 1.5em;
   margin: -40px 0 1em;
@@ -90,9 +96,12 @@ h2 ~ p {
 .bio-box img {
   width: 100%;
 }
+.bio-box .social-link {
+  display: block;
+  margin: 2em auto 1em;
+}
 .bio-copy {
-  font-size: 1em;
-  line-height: 1.5;
+  font-size: 0.75em;
 }
 .bio-copy a {
   color: green;
@@ -179,4 +188,147 @@ h2 ~ p {
 .footer-nav li {
   display: inline-block;
   margin: 2em 1em 0;
+}
+
+/* HERO STYLES */
+.full-hero {
+  background-color: #c7dbfc;
+  height: 100vh;
+  padding-top: 10vh;
+  box-sizing: border-box;
+  background-size: cover;
+}
+.hero-home {
+  background-position: center top;
+  background-image: url('/images/shark.jpg');
+}
+.hero-content {
+  color: #fff;
+  position: relative;
+  text-align: center;
+  top: 50%;
+  color: white;
+}
+.hero-content h1 {
+  color: rgba(255, 255, 255, 0.8);
+  font-size: 7vw;
+  margin-bottom: 0.25em;
+}
+.hero-content .social-link {
+  background-color: rgba(255, 255, 255, 0.8);
+  color: #557c83;
+}
+.hero-content .social-link:hover {
+  background-color: #000;
+  color: #fff;
+}
+.full-hero:after {
+    bottom: 2vh;
+  border: 10px solid;
+  border-color: #fff transparent transparent;
+  content: "";
+  height: 0;
+  left: 50%;
+  transform: translate(-50%, 0);
+  width: 0;
+}
+
+/* HOME SECTION */
+.home-section {
+  margin: 6rem auto;
+  max-width: 980px;
+  width: 90vw;
+}
+.home-section h2 {
+  text-align: center;
+  margin-bottom: 1.5em;
+}
+.home-callout {
+  padding: 7vh 0;
+  background-color: #000;
+  color: #fff;
+  display: flex;
+  align-items: center;
+}
+.home-callout h3 {
+  color: inherit;
+  margin-top: 1em;
+}
+.callout-title {
+  flex: 1;
+  font-size: 5.75vw;
+  text-align: right;
+  text-transform: uppercase;
+}
+.callout-copy {
+  flex: 1 0 50%;
+  max-width: 600px;
+  padding: 0 3vw;
+  font-size: 0.8rem;
+}
+
+/* FLEX CONTENT */
+.content-container {
+  display: flex;
+  flex: 1 1 auto;
+  padding-top: 10vh;
+  width: 100%;
+}
+
+/* 3 COL DISPLAY */
+.col-three {
+  display: flex;
+  flex: 1;
+}
+.col {
+  padding: 2em;
+  box-sizing: border-box;
+}
+.col-three .col~.col {
+  border-left: 1px solid rgba(0, 0, 0, 0.1)
+}
+.col-three .col-nav {
+  flex: 0 1 15em;
+}
+.col-three .col-content {
+  flex: 1 1 0;
+}
+.col-three .col-aside {
+  flex: 0 1 20em;
+}
+/*GALLERY PHOTO*/
+.gallery-thumbs {
+  height: 90vh;
+  overflow: scroll;
+}
+.gallery-thumbs > div {
+  cursor: pointer;
+}
+.gallery-thumbs img {
+  box-sizing: border-box;
+  box-shadow: 0 0 0 5px transparent;
+  display: inline-block;
+  margin: 0 0 10px 0;
+  opacity: 0.5;
+  transition: all 0.5s ease-in-out;
+  width: 100%;
+}
+.gallery-thumbs img:hover {
+  opacity: 1;
+}
+.gallery-thumbs .current img {
+  box-shadow: 0 0 0 5px #ed6e2f;
+  opacity: 1;
+}
+.gallery-photo {
+  position: relative;
+}
+.gallery-photo img {
+  width: 100%;
+}
+.gallery-info {
+  font-size: 0.8rem;
+}
+.gallery-info h3 {
+  margin-bottom: 1em;
 }
